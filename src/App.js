@@ -21,13 +21,31 @@ const clearIngredients = () => {
 }
 
 const findRecipes = () => {
-  console.log("Here is where we make API calls")
+  let ingredients = ingredList.toString()
+  axios.get(`https://bon-appetype.herokuapp.com/search_recipes?ingredients=${ingredients}`)
+  .then((response) => {
+    setRecipeData(response.data)
+  })
+  .catch((error) => {
+    console.log(error)
+})
+}
+const getRandomRecipes = () => {
+  console.log("get Random recipes!")
+  axios.get('https://bon-appetype.herokuapp.com/search_recipes/random')
+  .then((response) => {
+    setRecipeData(response.data)
+  })
+  .catch((error) => {
+    console.log(error)
+  })
 }
 
-const getRandomRecipes = () => {
-  axios.get(`${process.env.REACT_APP_BACKEND_URL}/{ingredList}`)
-  console.log("get random recipes list")
-}
+
+// placeholder function
+// const getRandomRecipes = () => {
+//   console.log("get Random recipes!")
+// }
 
 
   return (
@@ -41,7 +59,10 @@ const getRandomRecipes = () => {
         findRecipes={findRecipes}
       />
       <Randomizer getRandomRecipes={getRandomRecipes} />
-      <RecipeList />
+      <RecipeList 
+        recipeData={recipeData}
+        setRecipeData={setRecipeData}
+      />
     </main>
   );
 }

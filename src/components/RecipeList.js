@@ -1,8 +1,8 @@
 import React from 'react'
 import RecipeCard from './RecipeCard'
 
-function RecipeList() {
-  // const {image, title, time, recipe_url, servings} = props
+function RecipeList(props) {
+  const {recipeData} = props
 
   const recipeList = recipeData.map(recipe => {
     console.log(recipe)
