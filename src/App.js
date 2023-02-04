@@ -1,24 +1,48 @@
-import logo from './logo.svg';
-import './App.css';
+import {useState} from "react";
+import IngredientList from "./components/IngredientList";
+import RecipeList from "./components/RecipeList";
+import Randomizer from "./components/Randomizer";
+import axios from "axios";
 
 function App() {
+const [ingredList, setIngredList] = useState([])
+const [recipeData, setRecipeData] = useState([])
+
+
+const deleteIngredient = (id) => {
+  setIngredList(prevIngredList => {
+    const updatedList = prevIngredList.filter(ingredient => prevIngredList.indexOf(ingredient)!== id)
+    return updatedList
+  })
+}
+
+const clearIngredients = () => {
+  setIngredList([])
+}
+
+const findRecipes = () => {
+  console.log("Here is where we make API calls")
+}
+
+const getRandomRecipes = () => {
+  axios.get(`${process.env.REACT_APP_BACKEND_URL}/{ingredList}`)
+  console.log("get random recipes list")
+}
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main className="App">
+      <h1>Bon AppeType!</h1>
+      <IngredientList 
+        ingredList={ingredList} 
+        setIngredList={setIngredList} 
+        deleteIngredient={deleteIngredient}
+        clearIngredients={clearIngredients}
+        findRecipes={findRecipes}
+      />
+      <Randomizer getRandomRecipes={getRandomRecipes} />
+      <RecipeList />
+    </main>
   );
 }
 
