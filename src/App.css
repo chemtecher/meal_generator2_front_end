@@ -18,3 +18,7 @@ nav {
     align-items: center;
     justify-content: space-evenly;
 }
+
+h3 {
+    justify-content: space-between;
+}
