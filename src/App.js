@@ -2,6 +2,7 @@ import {useState} from "react";
 import IngredientList from "./components/IngredientList";
 import RecipeList from "./components/RecipeList";
 import Randomizer from "./components/Randomizer";
+import NavBar from "./components/NavBar";
 import axios from "axios";
 
 function App() {
@@ -21,8 +22,7 @@ const clearIngredients = () => {
 }
 
 const findRecipes = () => {
-  let ingredients = ingredList.toString()
-  axios.get(`https://bon-appetype.herokuapp.com/search_recipes?ingredients=${ingredients}`)
+  axios.get(`${process.env.REACT_APP_BACKEND_URL}/search_recipes?ingredients=${ingredList}`)
   .then((response) => {
     setRecipeData(response.data)
   })
@@ -32,7 +32,7 @@ const findRecipes = () => {
 }
 const getRandomRecipes = () => {
   console.log("get Random recipes!")
-  axios.get('https://bon-appetype.herokuapp.com/search_recipes/random')
+  axios.get(`${process.env.REACT_APP_BACKEND_URL}/search_recipes/random`)
   .then((response) => {
     setRecipeData(response.data)
   })
@@ -42,14 +42,9 @@ const getRandomRecipes = () => {
 }
 
 
-// placeholder function
-// const getRandomRecipes = () => {
-//   console.log("get Random recipes!")
-// }
-
-
   return (
     <main className="App">
+      <NavBar />
       <h1>Bon AppeType!</h1>
       <IngredientList 
         ingredList={ingredList} 
