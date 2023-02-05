@@ -58,6 +58,9 @@ const getRandomRecipes = () => {
         recipeData={recipeData}
         setRecipeData={setRecipeData}
       />
+      <footer>
+            <small>©2023 Foodies development. All rights reserved.</small>
+        </footer>
     </main>
   );
 }

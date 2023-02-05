@@ -33,8 +33,8 @@ function UserForm() {
   } 
 
   return (
-    <div className="form-container" onSubmit={handleSubmit}>UserForm
-      <form>
+    <div className="form-container" >
+      <form onSubmit={handleSubmit}>
         <input
           type="email"
           placeholder="Email address"

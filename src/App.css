@@ -2,6 +2,7 @@
 nav {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     background-color: grey;
     height: 10vh;
     padding: 30px 25px;
@@ -15,10 +16,8 @@ nav {
 
 .nav-options {
     display: flex;
-    align-items: center;
-    justify-content: space-evenly;
 }
 
-h3 {
-    justify-content: space-between;
+.nav-options > h3 {
+    padding: 10px;
 }
