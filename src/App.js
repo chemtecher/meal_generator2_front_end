@@ -4,6 +4,7 @@ import RecipeList from "./components/RecipeList";
 import Randomizer from "./components/Randomizer";
 import NavBar from "./components/NavBar";
 import axios from "axios";
+import "./App.css"
 
 function App() {
 const [ingredList, setIngredList] = useState([])
@@ -45,7 +46,6 @@ const getRandomRecipes = () => {
   return (
     <main className="App">
       <NavBar />
-      <h1>Bon AppeType!</h1>
       <IngredientList 
         ingredList={ingredList} 
         setIngredList={setIngredList} 
