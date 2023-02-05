@@ -1,9 +1,9 @@
 import React from 'react'
-
+import chefHat from 
 function NavBar() {
   return (
     <nav>
-      <img src="" alt="chef hat"/>
+      <img src="./images/servings_icon.png" alt="chef hat"/>
       <h1 className="nav-title">Bon AppeType!</h1>
       <div className="nav-options" >
         <h3>Sign In</h3>
