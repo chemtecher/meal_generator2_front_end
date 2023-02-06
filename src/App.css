@@ -1,4 +1,4 @@
-/* ------------------- Nav Bar Stylng -------------------------- */
+/* ----------------------------------------------------- Nav Bar Stylng ------------------------------------------------------ */
 nav {
     display: flex;
     align-items: center;
@@ -21,3 +21,61 @@ nav {
 .nav-options > h3 {
     padding: 10px;
 }
+
+/* ----------------------------------------------------- UserForm Stylng ------------------------------------------------------ */
+
+/* div that contains the form */
+.form-container {
+    height: 100vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* <form> element */
+.form {
+    background-color: white;
+    padding: 50px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 5px 5px 15px -1px rgba(0,0,0,0.75);
+}
+
+/* <input> elements */
+.form-input {
+    width: 100%;
+    margin-bottom: 20px;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    padding: 5px;
+}
+
+/* ----------------------------------------------------- PopUp Stylng ------------------------------------------------------ */
+.popup-box {
+    position: fixed;
+    background: #00000050;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+}
+
+.box {
+    position: relative;
+    width: 70%;
+    margin: 0 auto;
+    height: auto;
+    max-height: 70vh;
+    margin-top: calc(100vh - 85vh - 20px);
+    background: #fff;
+    border-radius: 4px;
+    padding: 20px;
+    border: 1px solid #999;
+    overflow: auto;
+}
+

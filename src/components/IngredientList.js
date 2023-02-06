@@ -55,7 +55,7 @@ function IngredientList(props) {
     <div>
       <h3>Ingredients:</h3>
       <input
-      className="ingredient-form-input"
+      className="form-ingredient-input"
       type="text"
       placeholder="enter ingredient(s) here"
       name="ingredientInput"

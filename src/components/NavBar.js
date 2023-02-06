@@ -1,16 +1,17 @@
 import { useState } from 'react'
+import PopUp from './PopUp'
 import UserForm from './UserForm'
 
 
 function NavBar() {
   // create state 
-  const [isOpen, setIsOpen] = useState(false)
+  const [signInClicked, setSignInClicked] = useState(false)
 
   // Event handler function that runs when Sign In is clicked
   // toggles the value of isOpen state 
 
   const togglePopUpForm = () => {
-    setIsOpen(!isOpen)
+    setSignInClicked(!signInClicked)
   }
   return (
     <nav>
@@ -19,7 +20,8 @@ function NavBar() {
       <div className="nav-options">
         <h3 onClick={togglePopUpForm}>
           Sign In
-          {isOpen && <UserForm />}
+          {/* {signInClicked && <UserForm />} */}
+          {signInClicked && <UserForm />}
         </h3>
         <h3 className="nav-about_us">About Us</h3>
         <h3>Log Out</h3>

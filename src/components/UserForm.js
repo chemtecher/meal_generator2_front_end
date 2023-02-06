@@ -33,37 +33,38 @@ function UserForm() {
   } 
 
   return (
-    <div className="form-container" >
-      <form onSubmit={handleSubmit}>
-        <input
-          type="email"
-          placeholder="Email address"
-          className="form-input email"
-          name="email"
-          onChange={handleChange}
-          value={formData.email}
-        />
-        <input
-          type="password"
-          placeholder="Password"
-          className="form-input password"
-          name="password"
-          onChange={handleChange}
-          value={formData.email}
-        />
-        <input
-          type="password"
-          placeholder="Confirm Password"
-          className="form-input confirmation"
-          name="confirmPassword"
-          onChange={handleChange}
-          value={formData.confirmPassword}
-        />
-        <button className="button form-submit">
-          Sign Up
-        </button>
-      </form>
-
+    <div className="form-container popup-box" >
+      <div className="box">
+        <form className="form user-info" onSubmit={handleSubmit}>
+          <input
+            type="email"
+            placeholder="Email address"
+            className="form-input email"
+            name="email"
+            onChange={handleChange}
+            value={formData.email}
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            className="form-input password"
+            name="password"
+            onChange={handleChange}
+            value={formData.email}
+          />
+          <input
+            type="password"
+            placeholder="Confirm Password"
+            className="form-input confirmation"
+            name="confirmPassword"
+            onChange={handleChange}
+            value={formData.confirmPassword}
+          />
+          <button className="button user-form-submit">
+            Sign Up
+          </button>
+        </form>
+      </div>
     </div>
   )
 }
