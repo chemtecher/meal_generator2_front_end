@@ -27,6 +27,17 @@ function NavBar() {
         <h3 className="nav-about_us">About Us</h3>
         <h3>Log Out</h3>
         <h3>Saved Recipes</h3>
+        <SavedRecipes 
+          savedRecipesData={savedRecipesData} 
+          setSavedRecipeData={setSavedRecipeData}
+          getSavedRecipes={getSavedRecipes}
+          user_id={user_id}
+        /> 
+        {/* need onclick for saved button to send you to saved recipes */}
+      </div>
+    </nav>
+
+
       </div>
     </nav>
   )
