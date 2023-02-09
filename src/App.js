@@ -3,9 +3,10 @@ import About from "./components/About"
 import Home from "./components/Home"
 import NavBarLoggedOut from "./components/NavBarLoggedOut";
 import NavBarLoggedIn from "./components/NavBarLoggedIn";
+import SavedRecipes from "./components/SavedRecipes"
 import { Route, Routes } from "react-router-dom"
 import { useSelector, useDispatch } from 'react-redux';
-import { setLogin, setLogout } from './features/counter/counterSlice';
+// import { setLogin, setLogout } from './features/counter/counterSlice';
 
 function App() {
 
@@ -33,7 +34,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />}></Route>
           <Route path="/about" element={<About />}></Route>
-          <Route path="/saved-recipes" element={<savedRecipes />}></Route>
+          <Route path="/saved-recipes" element={<SavedRecipes />}></Route>
         </Routes>
       </main>
     )

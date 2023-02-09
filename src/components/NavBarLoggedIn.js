@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import  { Link } from 'react-router-dom'
 // import  { Link, useHistory, redirectToPath } from 'react-router-dom'
 import { setLogin } from '../features/counter/counterSlice';
+import SavedRecipes from './SavedRecipes';
+import axios from 'axios'
 
 function NavBarLoggedIn() {
     // const history = useHistory();
@@ -11,6 +13,21 @@ function NavBarLoggedIn() {
     const logout = () => {
         dispatch(setLogin(null))
         // redirectToPath(history)
+    }
+
+    const [savedRecipesData, setSavedRecipeData] = useState([])
+
+    let user_id = 3;
+
+    const getSavedRecipes = (user_id) => {
+        axios.get(`${process.env.REACT_APP_BACKEND_URL}/user/${user_id}/recipes`)
+        .then((response) => {
+        setSavedRecipeData(response.data)
+        console.log(response.data, "All Saved Recipes")
+        })
+        .catch((error) => {
+        console.log(error)
+    })
     }
 
 
@@ -27,7 +44,13 @@ function NavBarLoggedIn() {
                     <li>About Us</li>
                 </Link>
                 <Link to='/saved-recipes'>
-                    <li>Saved Recipes</li>
+                    {/* <li>Saved Recipes</li> */}
+                    <SavedRecipes
+                        savedRecipesData={savedRecipesData} 
+                        setSavedRecipeData={setSavedRecipeData}
+                        getSavedRecipes={getSavedRecipes}
+                        user_id={user_id}     
+                    />
                 </Link>
                 {/* In the logout we will add an onclick with dispatch to update state back to null to rerender the page */}
                 {/* Make sure that the backend is up to date in Heroku */}
