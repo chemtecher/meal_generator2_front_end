@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import PopUp from './PopUp'
 import UserForm from './UserForm'
+import SavedRecipes from './SavedRecipes'
 
 
 function NavBar() {
@@ -34,10 +35,6 @@ function NavBar() {
           user_id={user_id}
         /> 
         {/* need onclick for saved button to send you to saved recipes */}
-      </div>
-    </nav>
-
-
       </div>
     </nav>
   )
