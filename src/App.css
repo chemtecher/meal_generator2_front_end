@@ -8,6 +8,7 @@ nav {
     padding: 30px 25px;
 }
 
+
 .nav-title {
     margin-right: auto;
     font-weight: 700;
@@ -68,7 +69,7 @@ nav {
 .box {
     position: relative;
     width: 70%;
-    margin: 0 auto;
+    margin: 2 auto;
     height: auto;
     max-height: 70vh;
     margin-top: calc(100vh - 85vh - 20px);

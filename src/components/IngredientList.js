@@ -4,12 +4,10 @@ import Ingredient from './Ingredient'
 function IngredientList(props) {
   // destructuring props to use variable names vs props.variable
   const{ingredList, setIngredList, deleteIngredient, clearIngredients, findRecipes} = props;
-  const [ingredInput, setIngredInput] = useState("")
-  // const [ingredList, setIngredList] = useState([])
-  
-  
-  const handleChange = event => {
-    setIngredInput(event.target.value)
+  const [ingredInput, setIngredInput] = useState("");
+ 
+  const handleChange =async( event) => {
+    setIngredInput(event.target.value);
   }
 
   // onClick event handler function
@@ -62,6 +60,7 @@ function IngredientList(props) {
       value={ingredInput ||""}
       onChange={handleChange}
       />
+      
     <button
       className="button submit-ingredients"
       onClick={getIngredientsList}
