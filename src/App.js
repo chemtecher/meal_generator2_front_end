@@ -1,67 +1,55 @@
-import {useState} from "react";
-import IngredientList from "./components/IngredientList";
-import RecipeList from "./components/RecipeList";
-import Randomizer from "./components/Randomizer";
-import NavBar from "./components/NavBar";
-import axios from "axios";
-import "./App.css"
+import React, { useEffect, useState } from 'react'
+import About from "./components/About"  
+import Home from "./components/Home"
+import NavBarLoggedOut from "./components/NavBarLoggedOut";
+import NavBarLoggedIn from "./components/NavBarLoggedIn";
+import { Route, Routes } from "react-router-dom"
+import { useSelector, useDispatch } from 'react-redux';
+import { setLogin, setLogout } from './features/counter/counterSlice';
 
 function App() {
-const [ingredList, setIngredList] = useState([])
-const [recipeData, setRecipeData] = useState([])
 
+  // const [isLogin, setisLogin] = useState(false)
+  
 
-const deleteIngredient = (id) => {
-  setIngredList(prevIngredList => {
-    const updatedList = prevIngredList.filter(ingredient => prevIngredList.indexOf(ingredient)!== id)
-    return updatedList
-  })
-}
+  const isLogin = useSelector((state) => state.login)
+  console.log(isLogin)
+  // const isLogin = localStorage.getItem('token')
+  // const isLogin = localStorage.getItem('token')
+  // setisLogin(localStorage.getItem('token'))
+  // console.log(isLogin)
+  const dispatch = useDispatch()
 
-const clearIngredients = () => {
-  setIngredList([])
-}
+  // React.useEffect(() => {
+  //   setisLogin(prevState => !prevState)
+  // }, [isLogin])
 
-const findRecipes = () => {
-  axios.get(`${process.env.REACT_APP_BACKEND_URL}/search_recipes?ingredients=${ingredList}`)
-  .then((response) => {
-    setRecipeData(response.data)
-  })
-  .catch((error) => {
-    console.log(error)
-})
-}
-const getRandomRecipes = () => {
-  console.log("get Random recipes!")
-  axios.get(`${process.env.REACT_APP_BACKEND_URL}/search_recipes/random`)
-  .then((response) => {
-    setRecipeData(response.data)
-  })
-  .catch((error) => {
-    console.log(error)
-  })
-}
+  
 
+  if (isLogin.token) {
+    return (
+      <main>
+        <NavBarLoggedIn />
+        <Routes>
+          <Route path="/" element={<Home />}></Route>
+          <Route path="/about" element={<About />}></Route>
+          <Route path="/saved-recipes" element={<savedRecipes />}></Route>
+        </Routes>
+      </main>
+    )
+  }
 
   return (
-    <main className="App">
-      <NavBar />
-      <IngredientList 
-        ingredList={ingredList} 
-        setIngredList={setIngredList} 
-        deleteIngredient={deleteIngredient}
-        clearIngredients={clearIngredients}
-        findRecipes={findRecipes}
-      />
-      <Randomizer getRandomRecipes={getRandomRecipes} />
-      <RecipeList 
-        recipeData={recipeData}
-        setRecipeData={setRecipeData}
-      />
-      <footer>
-            <small>©2023 Foodies C18 development. All rights reserved.</small>
-        </footer>
+    <main>
+      <NavBarLoggedOut />
+      <Routes>
+        <Route path="/" element={<Home />}></Route>
+        <Route path="/about" element={<About />}></Route>
+        <Route path="/saved-recipes" element={<savedRecipes />}></Route>
+      </Routes>
+      {/* <SignInForm /> */}
     </main>
+    
   );
 }
 
