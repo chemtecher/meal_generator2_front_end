@@ -21,7 +21,7 @@ function NavBar() {
       axios.get(`${process.env.REACT_APP_BACKEND_URL}/user/${user_id}/recipes`)
       .then((response) => {
         setSavedRecipeData(response.data)
-        console.log(response.data, "Saved Recipes")
+        console.log(response.data, "All Saved Recipes")
       })
       .catch((error) => {
         console.log(error)
