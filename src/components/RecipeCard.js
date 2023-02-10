@@ -1,7 +1,5 @@
-import axios from "axios";
-import React, { useCallback, useState } from "react";
-import PopUp from "./FavPopUp";
-import UserForm from "./UserForm";
+import React, {useState } from "react";
+
 
 function RecipeCard(props) {
   // const {image, title, time, recipe_url, servings} = props.recipe;
