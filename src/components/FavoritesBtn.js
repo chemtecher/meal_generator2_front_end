@@ -6,6 +6,7 @@ import axios from "axios";
 export default function FavoritesBtn({ recipe }) {
   
   const [liked, setLiked] = React.useState(false);
+  let userId = 3
   
   const addToFav = async () => {
     const body = {
