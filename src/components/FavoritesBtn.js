@@ -17,7 +17,7 @@ export default function FavoritesBtn({recipe}){
                 "Access-Control-Allow-Origin": "*",
             }
           };
-        console.log(body,"body 0-0-0-0")
+        
         try{
             if (liked){
             // if(recipe.liked) This is if we have the liked attribute in the backend for recipe.
@@ -33,38 +33,12 @@ export default function FavoritesBtn({recipe}){
 
     }
     
-    
-    // const heartFill = recipe.user_id ? '❤️' : '🤍';
-    // console.log(recipe)
-    // const updateFavorites = () => {
-    //     if (recipe.user_id) {
-    //     axios.delete(`${process.env.REACT_APP_BACKEND_URL}/search_recipes/${recipe.id}`)
-    //     .catch((error) => {
-    //         console.log("unfave unsuccessful", error)
-    //     })
-    //     }
-    //     else {
-    //     axios.post(`${process.env.REACT_APP_BACKEND_URL}/user/3/add_recipe`,recipe)
-    //     .then(console.log("Recipe sucessfully saved!"))
-    //     .catch((error) => {
-    //         console.log("Saved failed:", error)
-    //     })
-    //     }
-    // }
-
-    
     return (
         <>
         <button onClick={()=>{addToFav(); setLiked(!liked)}}>
         {!liked? "🤍":"❤️"}
     
-            </button>
-        {/* <button onClick={updateFavorites}>
-        {heartFill}
-            </button> */}
-        
-
+        </button>
         </>
     )
-
 };
