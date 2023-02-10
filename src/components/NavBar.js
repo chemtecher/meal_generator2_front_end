@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import PopUp from './PopUp'
 import UserForm from './UserForm'
 import SavedRecipes from './SavedRecipes'
 import axios from 'axios'
