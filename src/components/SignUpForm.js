@@ -1,7 +1,6 @@
 import React, {useState} from 'react'
 import axios from "axios";
 import { useDispatch } from 'react-redux';
-// import dispatch from './NavBarLoggedIn'
 import { setLogin } from '../features/counter/counterSlice';
 
 function SignUpForm() {
@@ -29,20 +28,14 @@ function SignUpForm() {
     event.preventDefault();
     if (formData.confirmPassword !== formData.password) {
       console.log("Passwords do not match")
-      // or add some sort of break
       return false
-      // return to exit from function
-      // return true or false to  be used in another function for API call??
-      // return false
     }
     else {
       axios.post(`${process.env.REACT_APP_BACKEND_URL}/user/signup`, formData).then((response) => {
-                // localStorage.setItem("token", JSON.stringify(response.data));
+
       dispatch(setLogin(response.data.token))
-                // setLoggedIn(true);
             })
-        
-      // console.log("Sign up sccessful")
+      
       .catch(error => console.log(error.data))
     };
     
@@ -87,7 +80,6 @@ function SignUpForm() {
           <button className="button user-form-submit" onClick={e => handleSubmit(e)}>
             Sign Up
           </button>
-          {/* here im going to render the message of whether user was successful or not- based on state */}
         </form>
       </div>
     </div>

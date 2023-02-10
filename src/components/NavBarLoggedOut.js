@@ -1,23 +1,13 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import PopUp from './PopUp';
 import SignInForm from './SignInForm';
 import SignUpForm from './SignUpForm';
-import NavBarLoggedIn from "./NavBarLoggedIn"
 
 
 function NavBarLoggedOut() {
 
     const [signUpPopup, setSignUpPopup] = useState(false);
     const [signInPopup, setSignInPopup] = useState(false);
-
-
-    //KEEP 
-
-    // if (token) {
-    //     return (
-    //         <NavBarLoggedIn />
-    //     )
-    // }
 
     return (
         <nav>

@@ -34,8 +34,6 @@ function NavBarLoggedIn() {
     return (
         <nav>
             <img src='' alt='chef hat' />
-            {/* remove the anchor tag and wrap into LINK tag -> what this does it that it omits refresh */}
-            {/* <a href="/" className="nav-title">Bon AppeType!</a> */}
             <Link to='/'>
                 Bon AppeType
             </Link>
@@ -44,7 +42,6 @@ function NavBarLoggedIn() {
                     <li>About Us</li>
                 </Link>
                 <Link to='/saved-recipes'>
-                    {/* <li>Saved Recipes</li> */}
                     <SavedRecipes
                         savedRecipesData={savedRecipesData} 
                         setSavedRecipeData={setSavedRecipeData}
@@ -52,9 +49,6 @@ function NavBarLoggedIn() {
                         user_id={user_id}     
                     />
                 </Link>
-                {/* In the logout we will add an onclick with dispatch to update state back to null to rerender the page */}
-                {/* Make sure that the backend is up to date in Heroku */}
-                {/* We will also have to do the same with SignUp as what we did with Sign In -> line17/line24 */}
                 <li onClick={logout}>Logout</li>
             </ul>
         </nav>

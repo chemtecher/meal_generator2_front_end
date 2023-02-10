@@ -1,9 +1,7 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import axios from "axios";
-import { useSelector, useDispatch } from 'react-redux';
-import { setLogin, setLogout } from '../features/counter/counterSlice';
-// import { useDispatch } from 'react-redux';
-// import dispatch from './NavBarLoggedIn'
+import { useDispatch } from 'react-redux';
+import { setLogin } from '../features/counter/counterSlice';
 
 
 function SignInForm() {
@@ -15,16 +13,13 @@ function SignInForm() {
         }
     );
 
-    // const isLogin = useSelector((state) => state.counter.value)
     const dispatch = useDispatch()
 
     const onLogin = e => {
         e.preventDefault();
         axios.post(`${process.env.REACT_APP_BACKEND_URL}/user/login`, formData )
             .then((response) => {
-                // localStorage.setItem("token", JSON.stringify(response.data));
-                dispatch(setLogin(response.data.token))
-                // setLoggedIn(true);
+            dispatch(setLogin(response.data.token))
             })
             .catch((error) => {
             console.log(error.response)
@@ -51,7 +46,6 @@ function SignInForm() {
                     type='text'
                     placeholder='email@example.com'
                     name='email'
-                    // ... -> copying current state, and adding (in this case) email value from form 
                     onChange={e => setFormData({...formData, email: e.target.value })}
                     />
                 </label>
