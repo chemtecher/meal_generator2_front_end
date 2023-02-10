@@ -6,6 +6,7 @@ import NavBarLoggedIn from "./components/NavBarLoggedIn";
 import SavedRecipes from "./components/SavedRecipes"
 import { Route, Routes } from "react-router-dom"
 import { useSelector, useDispatch } from 'react-redux';
+import axios from 'axios';
 // import { setLogin, setLogout } from './features/counter/counterSlice';
 
 function App() {
@@ -25,6 +26,21 @@ function App() {
   //   setisLogin(prevState => !prevState)
   // }, [isLogin])
 
+  const [savedRecipesData, setSavedRecipesData] = useState([])
+
+    let user_id = 3;
+
+    const getSavedRecipes = (user_id) => {
+        axios.get(`${process.env.REACT_APP_BACKEND_URL}/user/${user_id}/recipes`)
+        .then((response) => {
+        setSavedRecipesData(response.data)
+        console.log(response.data, "All Saved Recipes")
+        })
+        .catch((error) => {
+        console.log(error)
+    })
+    }
+
   
 
   if (isLogin.token) {
@@ -34,7 +50,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />}></Route>
           <Route path="/about" element={<About />}></Route>
-          <Route path="/saved-recipes" element={<SavedRecipes />}></Route>
+          <Route path="/saved-recipes" element={<SavedRecipes savedRecipesData={savedRecipesData} setSavedRecipesData={setSavedRecipesData} getSavedRecipes={getSavedRecipes} user_id={user_id}/>}></Route>
         </Routes>
       </main>
     )

@@ -15,20 +15,20 @@ function NavBarLoggedIn() {
         // redirectToPath(history)
     }
 
-    const [savedRecipesData, setSavedRecipeData] = useState([])
+    // const [savedRecipesData, setSavedRecipeData] = useState([])
 
-    let user_id = 3;
+    // let user_id = 3;
 
-    const getSavedRecipes = (user_id) => {
-        axios.get(`${process.env.REACT_APP_BACKEND_URL}/user/${user_id}/recipes`)
-        .then((response) => {
-        setSavedRecipeData(response.data)
-        console.log(response.data, "All Saved Recipes")
-        })
-        .catch((error) => {
-        console.log(error)
-    })
-    }
+    // const getSavedRecipes = (user_id) => {
+    //     axios.get(`${process.env.REACT_APP_BACKEND_URL}/user/${user_id}/recipes`)
+    //     .then((response) => {
+    //     setSavedRecipeData(response.data)
+    //     console.log(response.data, "All Saved Recipes")
+    //     })
+    //     .catch((error) => {
+    //     console.log(error)
+    // })
+    // }
 
 
     return (
@@ -42,12 +42,13 @@ function NavBarLoggedIn() {
                     <li>About Us</li>
                 </Link>
                 <Link to='/saved-recipes'>
-                    <SavedRecipes
+                    <li> Saved Recipes </li>
+                    {/* <SavedRecipes
                         savedRecipesData={savedRecipesData} 
                         setSavedRecipeData={setSavedRecipeData}
                         getSavedRecipes={getSavedRecipes}
                         user_id={user_id}     
-                    />
+                    /> */}
                 </Link>
                 <li onClick={logout}>Logout</li>
             </ul>
