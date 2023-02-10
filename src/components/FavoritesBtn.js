@@ -1,11 +1,11 @@
 import React from "react";
 import axios from "axios";
-import { useState } from "react";
+// import { useState } from "react";
 
 
 export default function FavoritesBtn({ recipe }) {
   
-    const [liked, setLiked] = React.useState(false);
+  const [liked, setLiked] = React.useState(false);
   
   const addToFav = async () => {
     const body = {
@@ -40,24 +40,6 @@ export default function FavoritesBtn({ recipe }) {
     }
   };
 
-  // const heartFill = recipe.user_id ? '❤️' : '🤍';
-  // console.log(recipe)
-  // const updateFavorites = () => {
-  //     if (recipe.user_id) {
-  //     axios.delete(`${process.env.REACT_APP_BACKEND_URL}/search_recipes/${recipe.id}`)
-  //     .catch((error) => {
-  //         console.log("unfave unsuccessful", error)
-  //     })
-  //     }
-  //     else {
-  //     axios.post(`${process.env.REACT_APP_BACKEND_URL}/user/3/add_recipe`,recipe)
-  //     .then(console.log("Recipe sucessfully saved!"))
-  //     .catch((error) => {
-  //         console.log("Saved failed:", error)
-  //     })
-  //     }
-  // }
-
   return (
     <>
       <button
@@ -68,9 +50,7 @@ export default function FavoritesBtn({ recipe }) {
       >
         {!liked ? "🤍" : "❤️"}
       </button>
-      {/* <button onClick={updateFavorites}>
-        {heartFill}
-            </button> */}
+      
     </>
   );
 }

@@ -51,7 +51,7 @@ function NavBar() {
           getSavedRecipes={getSavedRecipes}
           user_id={user_id}
         />}
-        {/* need onclick for saved button to send you to saved recipes */}
+
       </div>
     </nav>
   )

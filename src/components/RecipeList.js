@@ -9,8 +9,7 @@ function RecipeList(props) {
     return(
       <>
       <FavoritesBtn recipe={recipe}/>
- <RecipeCard
-
+      <RecipeCard
             key={recipe.recipe_id}
             // passing the entire prop object (recipe from .map()) 
             // to an instance of the Recipe component
