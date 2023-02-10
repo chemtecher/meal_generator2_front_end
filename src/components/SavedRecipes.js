@@ -6,7 +6,7 @@ function SavedRecipes(props) {
     const {user_id, getSavedRecipes}= props 
 return (
         <div>
-            <h3 onClick={()=>getSavedRecipes(user_id)}>Favorites</h3>
+            <h3 onClick={()=>getSavedRecipes(user_id)}>Saved Recipes</h3>
         </div>
 )
 }

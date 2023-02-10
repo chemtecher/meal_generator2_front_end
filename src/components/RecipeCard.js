@@ -11,8 +11,8 @@ function RecipeCard(props) {
       <br/>
       <img className="recipe-img" src={recipe.image} alt="food dish"/>
       <h2>{recipe.title}</h2>
-      <p>plate or fork image {recipe.servings}</p>
-      <p>clock image {recipe.time}</p>
+      <p>plate or fork image {recipe.servings} servings</p>
+      <p>clock image {recipe.time} minutes</p>
 
     </div>
   )
