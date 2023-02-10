@@ -36,6 +36,7 @@ function UserForm() {
   return (
     <div className="form-container popup-box" >
       <div className="box">
+        
         <form className="form user-info" onSubmit={handleSubmit}>
           <input
             type="email"

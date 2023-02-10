@@ -10,8 +10,8 @@ function RecipeCard(props) {
       <br />
       <img className="recipe-img" src={image} alt="food dish" />
       <h2>{title}</h2>
-      <p>plate or fork image {servings}</p>
-      <p>clock image {time}</p>
+      <p>plate or fork image {servings} servings</p>
+      <p>clock image {time} mins</p>
     </div>
   );
 }

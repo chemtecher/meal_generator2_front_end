@@ -31,7 +31,7 @@ function NavBar() {
       .catch((error) => {
         console.log(error)
     })
-    }
+  }
 
   return (
     <nav>

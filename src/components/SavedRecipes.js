@@ -20,6 +20,7 @@ function SavedRecipes(props) {
 return (
     <div className="popup-box">
         <div className="box">
+            <span className="close-icon" onClick={props.handleClose}>x</span>
             <div>
                 <h3 onClick={()=>getSavedRecipes(user_id)}>Favorites</h3>
                 <h3>You have {favList.length} Saved Recipes</h3>
