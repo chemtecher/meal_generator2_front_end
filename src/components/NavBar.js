@@ -15,11 +15,9 @@ function NavBar() {
   // Event handler function that runs when "Sign In" in nav bar is clicked
   // toggles the value of signInClicked state 
   const togglePopUpForm = () => {
-    // setSignInClicked(true)
     setSignInClicked(!signInClicked)
   }
   const toggleFavPopUp = () => {
-    // setSignInClicked(true)
     setFavClicked(!favClicked)
   }
   const getSavedRecipes = (user_id) => {
@@ -40,7 +38,7 @@ function NavBar() {
       <div className="nav-options">
         <h3 onClick={togglePopUpForm}>
           Sign In
-          {signInClicked && <UserForm />}
+          {signInClicked && <UserForm handleClose={togglePopUpForm}/>}
         </h3>
         <h3 className="nav-about_us">About Us</h3>
         <h3>Log Out</h3>

@@ -1,6 +1,6 @@
 import {useState} from 'react'
 
-function UserForm() {
+function UserForm(props) {
   
   const [formData, setFormData] = useState(
     {
@@ -36,7 +36,7 @@ function UserForm() {
   return (
     <div className="form-container popup-box" >
       <div className="box">
-        
+      <span className="close-icon" onClick={props.handleClose}>x</span>
         <form className="form user-info" onSubmit={handleSubmit}>
           <input
             type="email"
