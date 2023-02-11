@@ -7,12 +7,14 @@ function SavedRecipes(props) {
     const {savedRecipesData}= props
     const favList = savedRecipesData.map(favRecipe => {
         return(
-        <div key={favRecipe.reicpe_id}>
-            <FavoritesBtn favRecipe={favRecipe}/>
-            <SavRecipeCard favRecipe={favRecipe}/>
-        </div>
-        )
-    })
+            <div key={favRecipe.recipe_id}>
+                <FavoritesBtn favRecipe={favRecipe} />
+                <SavRecipeCard
+                    favRecipe={favRecipe}
+                />
+            </div>
+        );
+    });
     
 return (
     <div className="popup-box">
