@@ -2,19 +2,16 @@ import React from 'react'
 import FavoritesBtn from './FavoritesBtn'
 import SavRecipeCard from './SavRecipeCard'
 
-
-
 function SavedRecipes(props) {
     const {user_id, getSavedRecipes, savedRecipesData}= props
     const favList = savedRecipesData.map(favRecipe => {
-        return (
-            <>
+        return(
+            <div key={favRecipe.recipe_id}>
                 <FavoritesBtn favRecipe={favRecipe} />
                 <SavRecipeCard
-                    key={favRecipe.recipe_id}
                     favRecipe={favRecipe}
                 />
-            </>
+            </div>
         );
     });
     
