@@ -7,7 +7,7 @@ function RecipeList(props) {
   const recipeList = recipeData.map(recipe => {
     console.log(recipe)
     return(
-      <>
+      <div>
       <FavoritesBtn recipe={recipe}/>
       <RecipeCard
             key={recipe.recipe_id}
@@ -15,7 +15,7 @@ function RecipeList(props) {
             // to an instance of the Recipe component
             recipe={recipe}
         />
-      </>
+      </div>
        
     )
   })

@@ -7,13 +7,13 @@ function SavedRecipes(props) {
     const {user_id, getSavedRecipes, savedRecipesData}= props
     const favList = savedRecipesData.map(favRecipe => {
         return(
-            <>
+            <div key={favRecipe.reicpe_id} >
             <FavoritesBtn favRecipe={favRecipe}/>
+            
             <SavRecipeCard 
-                key={favRecipe.reicpe_id}
                 favRecipe={favRecipe}
             />
-            </>
+            </div>
         )
     })
     

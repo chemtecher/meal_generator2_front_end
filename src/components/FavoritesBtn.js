@@ -1,13 +1,11 @@
 import React from "react";
 import axios from "axios";
-// import { useState } from "react";
-
+import { useState } from "react";
 
 export default function FavoritesBtn({ recipe }) {
-  
-  const [liked, setLiked] = React.useState(false);
-  let userId = 3
-  
+  const [liked, setLiked] = useState(false);
+  const userId = 3;
+
   const addToFav = async () => {
     const body = {
       ...recipe,
@@ -51,7 +49,6 @@ export default function FavoritesBtn({ recipe }) {
       >
         {!liked ? "🤍" : "❤️"}
       </button>
-      
     </>
   );
 }
