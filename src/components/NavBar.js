@@ -44,14 +44,16 @@ function NavBar() {
         </h3>
         <h3 className="nav-about_us">About Us</h3>
         <h3>Log Out</h3>
-        <h3 onClick={toggleFavPopUp}>Favorites</h3>
+        <h3 onClick={() => {
+          toggleFavPopUp();
+          getSavedRecipes(user_id);
+        }}
+        >Favorites</h3>
         {favClicked && <SavedRecipes 
           savedRecipesData={savedRecipesData} 
           setSavedRecipesData={setSavedRecipesData}
-          getSavedRecipes={getSavedRecipes}
           user_id={user_id}
         />}
-
       </div>
     </nav>
   )

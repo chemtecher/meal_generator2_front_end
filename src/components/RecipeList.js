@@ -16,7 +16,6 @@ function RecipeList(props) {
             recipe={recipe}
         />
       </div>
-       
     )
   })
 

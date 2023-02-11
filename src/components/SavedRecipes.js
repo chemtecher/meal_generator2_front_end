@@ -4,16 +4,13 @@ import SavRecipeCard from './SavRecipeCard'
 
 
 function SavedRecipes(props) {
-    const {user_id, getSavedRecipes, savedRecipesData}= props
+    const {savedRecipesData}= props
     const favList = savedRecipesData.map(favRecipe => {
         return(
-            <div key={favRecipe.reicpe_id} >
+        <div key={favRecipe.reicpe_id}>
             <FavoritesBtn favRecipe={favRecipe}/>
-            
-            <SavRecipeCard 
-                favRecipe={favRecipe}
-            />
-            </div>
+            <SavRecipeCard favRecipe={favRecipe}/>
+        </div>
         )
     })
     
@@ -22,7 +19,6 @@ return (
         <div className="box">
             <span className="close-icon" onClick={props.handleClose}>x</span>
             <div>
-                <h3 onClick={()=>getSavedRecipes(user_id)}>Favorites</h3>
                 <h3>You have {favList.length} Saved Recipes</h3>
                 {favList}
             </div>
