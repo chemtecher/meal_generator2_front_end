@@ -11,7 +11,11 @@ function NavBarLoggedOut() {
 
     return (
         <nav>
-            <img src='' alt='chef hat' />
+            <img
+                src={require('../images/chefHat.png')}
+                alt='chef hat'
+                className='nav--img'
+            />
             <a href="/" className="nav-title">Bon AppeType!</a>
             <ul className='nav--options'>
                 <li><a href="/about" className='nav--about_link'>About Us</a></li>

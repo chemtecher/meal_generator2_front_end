@@ -33,7 +33,11 @@ function NavBarLoggedIn() {
 
     return (
         <nav>
-            <img src='' alt='chef hat' />
+            <img
+                src={require('../images/chefHat.png')}
+                alt='chef hat'
+                className='nav--img'
+            />
             <Link to='/'>
                 Bon AppeType
             </Link>
