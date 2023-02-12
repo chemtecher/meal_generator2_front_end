@@ -5,16 +5,16 @@ import RecipeCard from './RecipeCard'
 function RecipeList(props) {
   const {recipeData} = props
   const recipeList = recipeData.map(recipe => {
-    console.log(recipe)
+    
     return(
-      <div>
-      <FavoritesBtn recipe={recipe}/>
+      <div key={recipe.recipe_id}>
       <RecipeCard
             key={recipe.recipe_id}
             // passing the entire prop object (recipe from .map()) 
             // to an instance of the Recipe component
             recipe={recipe}
         />
+      <FavoritesBtn recipe={recipe}/>
       </div>
     )
   })

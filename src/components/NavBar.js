@@ -52,6 +52,7 @@ function NavBar() {
           setSavedRecipesData={setSavedRecipesData}
           user_id={user_id}
           handleClose={toggleFavPopUp}
+          getSavedRecipes={getSavedRecipes}
         />}
       </div>
     </nav>

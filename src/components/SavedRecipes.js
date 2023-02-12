@@ -4,15 +4,18 @@ import RemoveButton from './RemoveButton'
 
 
 function SavedRecipes(props) {
-    const {savedRecipesData}= props
+    const {savedRecipesData, getSavedRecipes}= props
 
     
     const favList = savedRecipesData.map(favRecipe => {
         return(
             <div key={favRecipe.recipe_id}>
-                <RemoveButton favRecipe={favRecipe} />
                 <SavRecipeCard
                     favRecipe={favRecipe}
+                />
+                <RemoveButton 
+                favRecipe={favRecipe} 
+                getSavedRecipes={getSavedRecipes}
                 />
             </div>
         );
