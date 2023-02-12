@@ -1,7 +1,5 @@
 import React from 'react'
 import SavRecipeCard from './SavRecipeCard'
-import RemoveButton from './RemoveButton'
-
 
 function SavedRecipes(props) {
     const {savedRecipesData, getSavedRecipes}= props
@@ -13,10 +11,11 @@ function SavedRecipes(props) {
                 <SavRecipeCard
                     favRecipe={favRecipe}
                 />
-                <RemoveButton 
+                
+                {/* <RemoveButton 
                 favRecipe={favRecipe} 
                 getSavedRecipes={getSavedRecipes}
-                />
+                /> */}
             </div>
         );
     });
