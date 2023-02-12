@@ -48,7 +48,6 @@ export default function FavoritesBtn({ recipe }) {
 
 
   return (
-    <>
       <button
         onClick={() => {
           addToFav();
@@ -58,6 +57,5 @@ export default function FavoritesBtn({ recipe }) {
         {heartFill}
         {/* {!liked ? "🤍" : "❤️"} */}
       </button>
-    </>
   );
 }
