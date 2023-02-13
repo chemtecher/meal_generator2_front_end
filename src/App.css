@@ -136,3 +136,9 @@ nav {
 .about_us--links > a{
     padding-right: 20px;
 }
+
+/* ----------------------LogIn/SignUp Form -----------------------------*/
+.SignInForm--failure {
+    color: red;
+    font-weight: bold;
+}

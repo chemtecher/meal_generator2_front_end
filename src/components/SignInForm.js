@@ -13,25 +13,32 @@ function SignInForm() {
         }
     );
 
+    const [status, setStatus] = useState("");
+
     const dispatch = useDispatch()
 
     const onLogin = e => {
         e.preventDefault();
-        axios.post(`${process.env.REACT_APP_BACKEND_URL}/user/login`, formData )
+        axios.post(`${process.env.REACT_APP_BACKEND_URL}/user/login`, formData)
             .then((response) => {
-            dispatch(setLogin(response.data.token))
+                dispatch(setLogin(response.data.token));
+                setStatus({ type: 'success' });
             })
             .catch((error) => {
-            console.log(error.response)
+                // console.log(error.response)
+                setStatus({ type: 'error', error });
             });
 
         setFormData(
             {
-                email: "",
+                // email: "",
+                // password: ""
+                ...formData,
                 password:""
             }
-        )
-    }
+        );
+
+    };
 
 
     return (
@@ -44,7 +51,7 @@ function SignInForm() {
                     <input
                     value={formData.email}
                     type='text'
-                    placeholder='email@example.com'
+                    placeholder='Email address'
                     name='email'
                     onChange={e => setFormData({...formData, email: e.target.value })}
                     />
@@ -56,7 +63,7 @@ function SignInForm() {
                     value={formData.password}
                     type='password'
                     placeholder='password'
-                    name='password'
+                    name='Password'
                     onChange={e => setFormData({ ...formData, password: e.target.value })}
                         />
                 </label>
@@ -64,6 +71,7 @@ function SignInForm() {
                 <button type='submit' onClick={e => onLogin(e)} className="button user-form-submit">
                     Login
                 </button>
+                {status.type === 'error' ? <p className='SignInForm--failure'>Login unsuccessful- please check email or password.</p> : null}
             </form>
         </div>
     </div>

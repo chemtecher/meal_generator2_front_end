@@ -18,7 +18,7 @@ function About() {
                 The idea behind this app is to help users reduce food waste by giving them recipe ideas of things they already have at home.
                 Each year about 119 billion pounds of food is wasted in the United States, with household food waste making up 39% [42 billion pounds]
                 of the total amount. Not only does this food waste generate significant greenhouse gas emissions when it ends up in landfills, but it is
-                expensive to the consumer- about $160 billion in spoiled foods. We hope that with the web application, not only is the user able to reduce the amout of food waste at home, but also help them
+                expensive to the consumer- about $160 billion in spoiled foods annually. We hope that with the web application, not only is the user able to reduce the amout of food waste at home, but also help them
                 save some money, while learning to have fun in the kitchen and trying out different recipes!
             </p>
             <p className="about_us--tech">
