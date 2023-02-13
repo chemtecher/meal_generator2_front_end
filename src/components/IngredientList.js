@@ -24,19 +24,6 @@ function IngredientList(props) {
     setIngredInput("")
   }
   
-  // onClick event handler function
-  // removes ingredient from ingredList
-  // delete the ingredient whose index === id
-  // Filtered IngredList State by removing ingredient whose index is equal to passed in Id 
-  // Then updated IngredList state with filtered List
-  // ingredient represents an element from the prev state
-
-  // const deleteIngredient = (id) => {
-  //   setIngredList(prevIngredList => {
-  //     const updatedList = prevIngredList.filter(ingredient => prevIngredList.indexOf(ingredient)!== id)
-  //     return updatedList
-  //   })
-  // }
   console.log(ingredList)
 
   const ingredElements = ingredList.map((ingredient, index) => 
@@ -50,8 +37,9 @@ function IngredientList(props) {
   )
   
     return (
-    <div>
-      <h3>Ingredients:</h3>
+    <div className='ingredients--header'>
+      <h3 className='ingredients--title'>Ingredients:</h3>
+      <p className='ingredients--comment'>Separate each ingredient with a comma</p>
       <input
       className="form-ingredient-input"
       type="text"
@@ -62,21 +50,21 @@ function IngredientList(props) {
       />
       
     <button
-      className="button submit-ingredients"
+      className="button-submit-ingredients"
       onClick={getIngredientsList}
       >Submit
     </button>
-    <div>
-      <h3>Ingredient(s) List:</h3>
+    <div className='ingredients_list'>
+      <h3 className='ingredients_list--title'>Ingredient(s) List:</h3>
     </div>
       {ingredElements}
       <button 
-        className="button find-recipes"
+        className="button-find-recipes"
         onClick={findRecipes}
         >Find Me Recipes 
       </button>
       <button 
-        className="button clear-ingredients"
+        className="button-clear-ingredients"
         onClick={clearIngredients}
         >Clear Ingredients  
       </button>

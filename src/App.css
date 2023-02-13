@@ -3,37 +3,44 @@
     margin:1rem;
 }
 
+.App {
+    padding-left: 45px;
+}
+
 nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: grey;
-    height: 10vh;
-    padding: 30px 25px;
+    background-color: #D9D9D9;
+    height: 5vh;
+    padding: 30px 30px;
 }
 
 
 .nav-title {
     margin-right: auto;
     font-weight: 700;
-    font-size: 22px;
+    font-size: 25px;
     color: black;
     text-decoration: none;
     padding-left: 7px;
 }
 
-.nav-options li{
+.nav--options li{
     display: inline;
     padding: 10px;
     text-decoration: none;
 }
 
-.nav-options li:hover {
+.nav--options li:hover,
+a:hover {
     display: inline;
     padding: 10px;
     text-decoration: underline;
-    background-color:rgb(227, 221, 221);
+    background-color:rgb(246, 246, 246);
     border-radius: 5%;
+    color: #426b36;
+    font-weight: bold;
 }
 
 .nav-options > h3 {
@@ -51,6 +58,91 @@ nav {
     height: 35px;
     /* do we want a white background of the hat or not? */
     mix-blend-mode: multiply;
+}
+
+/* --------------Ingredient Component (after user types them in)----------- */
+.ingredients--listed_header {
+    /* border-color: red;
+    border-style: dashed; */
+    background-color:#F1F1F1 ;
+    max-width: 250px;
+    /* border-style: outset ; */
+}
+
+.ingredient--remove {
+    /* border-color: rgb(0, 255, 128); */
+    /* border-style: dashed; */
+    padding-right: 10px;
+
+}
+.ingredient--name {
+    /* border-color: rgb(100, 26, 143);
+    border-style: dashed; */
+    font-weight: 400;
+}
+
+/* -----Ingredients List Components------ */
+.ingredients--header{
+    /* border-color: rgb(100, 26, 143);
+    border-style: dashed; */
+}
+
+.ingredients--title {
+    font-size: 24px;
+    margin-bottom: 0px;
+}
+
+.ingredients--comment {
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.form-ingredient-input {
+    /* border-color: rgb(143, 26, 47);
+    border-style: dashed; */
+    background-color: #F1F1F1;
+    padding: 18px;
+    border-radius: 10px;
+    border-color: #00B4BF;
+    border-style: solid;
+    width: 212px;
+}
+
+.button-submit-ingredients {
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    background-color: #00B4BF;
+    position: relative;
+    left: -70px;
+    /* border-color: #00B4BF;
+    border-style: solid; */
+}
+
+.button-submit-ingredients:active {
+    color:#00B4BF;
+}
+
+.ingredients_list--title {
+    font-size: 24px;
+}
+
+.button-find-recipes,
+.button-clear-ingredients {
+    width: 124px;
+    padding: 5px;
+    border-radius: 10px;
+    border: none;
+    margin-top: 10px;
+}
+
+.button-find-recipes {
+    background-color: #8DB580;
+    margin-right: 10px;
+}
+
+.button-clear-ingredients {
+    background-color: #00B4BF;
 }
 /* ----------------------------------------------------- UserForm Stylng ------------------------------------------------------ */
 
@@ -86,7 +178,6 @@ nav {
 }
 
 /* ----------------------------------------------------- PopUp Stylng ------------------------------------------------------ */
-
 .box {
     position: relative;
     width: 70%;
@@ -165,10 +256,4 @@ nav {
 .SignInForm--failure {
     color: red;
     font-weight: bold;
-}
-
-
-div {
-    border-color: red;
-    border-style: dashed;
 }
