@@ -30,6 +30,22 @@ function NavBar() {
         console.log(error)
     })
   }
+  const removeFromFav = (recipe_id) => {
+    try {
+      axios.delete(`${process.env.REACT_APP_BACKEND_URL}/search_recipes/remove/${recipe_id}`)
+      .then((data) => {
+        const newlyFilteredRecipes = savedRecipesData.filter((recipe) => {
+          return recipe.recipe_id !== recipe_id
+        })
+        setSavedRecipesData(newlyFilteredRecipes)
+        console.log(data)
+      })
+      console.log("Inside removed from saved")
+      
+    } catch (error) {
+      console.log(error)
+    }
+  }
 
   return (
     <nav>
@@ -53,6 +69,7 @@ function NavBar() {
           user_id={user_id}
           handleClose={toggleFavPopUp}
           getSavedRecipes={getSavedRecipes}
+          removeFromFav={removeFromFav}
         />}
       </div>
     </nav>

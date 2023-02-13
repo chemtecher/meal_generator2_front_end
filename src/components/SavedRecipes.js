@@ -2,7 +2,7 @@ import React from 'react'
 import SavRecipeCard from './SavRecipeCard'
 
 function SavedRecipes(props) {
-    const {savedRecipesData, getSavedRecipes}= props
+    const {savedRecipesData, getSavedRecipes, removeFromFav}= props
 
     
     const favList = savedRecipesData.map(favRecipe => {
@@ -10,12 +10,8 @@ function SavedRecipes(props) {
             <div key={favRecipe.recipe_id}>
                 <SavRecipeCard
                     favRecipe={favRecipe}
+                    removeFromFav={removeFromFav}
                 />
-                
-                {/* <RemoveButton 
-                favRecipe={favRecipe} 
-                getSavedRecipes={getSavedRecipes}
-                /> */}
             </div>
         );
     });
