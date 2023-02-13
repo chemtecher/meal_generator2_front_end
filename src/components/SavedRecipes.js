@@ -17,7 +17,7 @@ function SavedRecipes(props) {
     });
     
 return (
-    <div className="popup-box">
+    <div className="popup">
         <div className="box">
             <span className="close-icon" onClick={props.handleClose}>x</span>
             <div>
