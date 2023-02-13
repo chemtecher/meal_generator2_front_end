@@ -4,7 +4,7 @@ import SignInForm from './SignInForm';
 import SignUpForm from './SignUpForm';
 
 
-function NavBarLoggedOut() {
+function NavBarLoggedOut(props) {
 
     const [signUpPopup, setSignUpPopup] = useState(false);
     const [signInPopup, setSignInPopup] = useState(false);
@@ -20,12 +20,12 @@ function NavBarLoggedOut() {
             <ul className='nav--options'>
                 <li><a href="/about" className='nav--about_link'>About Us</a></li>
                 <li onClick={()=> setSignInPopup(true)}>Log In</li>
-                <PopUp trigger ={signInPopup} setTrigger={setSignInPopup}>
+                <PopUp trigger={signInPopup} setTrigger={setSignInPopup}>
                     <SignInForm />
                 </PopUp >
                 <li onClick={()=> setSignUpPopup(true)}>Sign Up</li>
                 <PopUp trigger ={signUpPopup} setTrigger={setSignUpPopup}>
-                    <SignUpForm/>
+                    <SignUpForm />
                 </PopUp>
             </ul>
         </nav>

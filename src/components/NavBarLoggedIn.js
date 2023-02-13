@@ -64,8 +64,6 @@ function NavBarLoggedIn() {
                 <Link to='/about'>
                     <li>About Us</li>
                 </Link>
-                {/* <Link to='/saved-recipes'> */}
-                    {/* <li> Saved Recipes </li> */}
                     <h3 onClick={() => {
                         toggleFavPopUp();
                         getSavedRecipes(user_id);
@@ -78,8 +76,7 @@ function NavBarLoggedIn() {
                         handleClose={toggleFavPopUp}
                         getSavedRecipes={getSavedRecipes}
                         removeFromFav={removeFromFav}
-        />}
-                {/* </Link> */}
+                        />}
                 <li onClick={logout}>Logout</li>
             </ul>
         </nav>
