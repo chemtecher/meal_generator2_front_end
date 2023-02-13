@@ -16,32 +16,7 @@ function App() {
 
   const isLogin = useSelector((state) => state.login)
   console.log(isLogin)
-  // const isLogin = localStorage.getItem('token')
-  // const isLogin = localStorage.getItem('token')
-  // setisLogin(localStorage.getItem('token'))
-  // console.log(isLogin)
-  const dispatch = useDispatch()
 
-  // React.useEffect(() => {
-  //   setisLogin(prevState => !prevState)
-  // }, [isLogin])
-
-  const [savedRecipesData, setSavedRecipesData] = useState([])
-
-    let user_id = 3;
-
-    const getSavedRecipes = (user_id) => {
-        axios.get(`${process.env.REACT_APP_BACKEND_URL}/user/${user_id}/recipes`)
-        .then((response) => {
-        setSavedRecipesData(response.data)
-        console.log(response.data, "All Saved Recipes")
-        })
-        .catch((error) => {
-        console.log(error)
-    })
-    }
-
-  
 
   if (isLogin.token) {
     return (
@@ -50,7 +25,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />}></Route>
           <Route path="/about" element={<About />}></Route>
-          <Route path="/saved-recipes" element={<SavedRecipes savedRecipesData={savedRecipesData} setSavedRecipesData={setSavedRecipesData} getSavedRecipes={getSavedRecipes} user_id={user_id}/>}></Route>
+          {/*props may need to be added to the SavedRecipes component*/}
+          <Route path="/saved-recipes" element={<SavedRecipes />}></Route>
         </Routes>
       </main>
     )

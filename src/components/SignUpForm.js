@@ -10,7 +10,9 @@ function SignUpForm() {
       email: "",
       password: "",
       confirmPassword: ""
-  })
+    })
+  
+  const [status, setStatus] = useState("")
 
   const handleChange = (event) => {
     const {name, value} = event.target
@@ -28,7 +30,7 @@ function SignUpForm() {
     event.preventDefault();
     if (formData.confirmPassword !== formData.password) {
       console.log("Passwords do not match")
-      return false
+      setStatus("error")
     }
     else {
       axios.post(`${process.env.REACT_APP_BACKEND_URL}/user/signup`, formData).then((response) => {
@@ -41,7 +43,8 @@ function SignUpForm() {
     
     setFormData(
       {
-        email: "",
+        // email: "",
+        ...formData,
         password: "",
         confirmPassword: ""
       }
@@ -80,6 +83,7 @@ function SignUpForm() {
           <button className="button user-form-submit" onClick={e => handleSubmit(e)}>
             Sign Up
           </button>
+          {status === 'error' ? <p className='SignInForm--failure'>Sign up unsuccessful- passwords do not match.</p> : null}
         </form>
       </div>
     </div>
