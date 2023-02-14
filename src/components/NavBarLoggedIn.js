@@ -51,33 +51,35 @@ function NavBarLoggedIn() {
   }
 
     return (
-        <nav>
+      <nav className='nav-login--containter'>
             <img
                 src={require('../images/chefHat.png')}
                 alt='chef hat'
                 className='nav--img'
             />
-            <Link to='/'>
-                Bon AppeType
+            <Link to='/' className='nav-title'>
+                Bon AppeType!
             </Link>
             <ul className='nav--options'>
-                <Link to='/about'>
-                    <li>About Us</li>
+                <Link to='/about' className='nav--about_link'>
+                    <li className='nav--about'>About Us</li>
                 </Link>
-                    <h3 onClick={() => {
-                        toggleFavPopUp();
-                        getSavedRecipes(user_id);
-                        }}
-                        >Favorites</h3>
-                        {favClicked && <SavedRecipes 
-                        savedRecipesData={savedRecipesData} 
-                        setSavedRecipesData={setSavedRecipesData}
-                        user_id={user_id}
-                        handleClose={toggleFavPopUp}
-                        getSavedRecipes={getSavedRecipes}
-                        removeFromFav={removeFromFav}
-                        />}
-                <li onClick={logout}>Logout</li>
+                <h3
+                  className="nav--favorties"
+                  onClick={() => {
+                  toggleFavPopUp();
+                  getSavedRecipes(user_id);
+                  }}
+                  >Saved Recipes</h3>
+                  {favClicked && <SavedRecipes 
+                  savedRecipesData={savedRecipesData} 
+                  setSavedRecipesData={setSavedRecipesData}
+                  user_id={user_id}
+                  handleClose={toggleFavPopUp}
+                  getSavedRecipes={getSavedRecipes}
+                  removeFromFav={removeFromFav}
+                  />}
+                <li onClick={logout} className="navbar--logout">Logout</li>
             </ul>
         </nav>
     )

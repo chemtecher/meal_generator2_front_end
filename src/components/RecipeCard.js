@@ -22,6 +22,7 @@ function RecipeCard(props) {
         alt="clock"
       /> {time} mins
     </div>
+
   )
 }
 
