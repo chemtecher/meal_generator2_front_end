@@ -61,14 +61,14 @@ function IngredientList(props) {
           {ingredElements}
         </div> 
       <button 
-        className="button-clear-ingredients"
-        onClick={clearIngredients}
-        >Clear Ingredients  
-      </button>
-      <button 
         className="button-find-recipes"
         onClick={findRecipes}
         >Find Me Recipes 
+      </button>
+      <button 
+        className="button-clear-ingredients"
+        onClick={clearIngredients}
+        >Clear Ingredients  
       </button>
     </div>
   )

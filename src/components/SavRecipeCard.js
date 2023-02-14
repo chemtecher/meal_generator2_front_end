@@ -10,12 +10,15 @@ function SavRecipeCard(props) {
   
   return (
     <div className="recipe-card saved-recipe-card">
-      SavRecipeCard
-      <br />
       <img className="recipe-img" src={image} alt="food dish" />
       <h2>{title}</h2>
-      <p>clock image {time} mins</p>
+      <img
+        className="recipe-time-img"
+        src={require("../images/time_icon.png")}
+        alt="clock"
+      /> {time} mins
       <button
+          className="favorites-button"
           onClick={() => {
           props.removeFromFav(recipe_id);
           setLiked(!liked)
