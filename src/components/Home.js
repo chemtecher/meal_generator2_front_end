@@ -45,19 +45,25 @@ const getRandomRecipes = () => {
 return (
     <main className="App">
       {/* {component} */}
-        <IngredientList 
-        ingredList={ingredList} 
-        setIngredList={setIngredList} 
-        deleteIngredient={deleteIngredient}
-        clearIngredients={clearIngredients}
-        findRecipes={findRecipes}
-        />
-        <Randomizer getRandomRecipes={getRandomRecipes} />
+        <div>
+            <div className="home-test">
+                <IngredientList 
+                ingredList={ingredList} 
+                setIngredList={setIngredList} 
+                deleteIngredient={deleteIngredient}
+                clearIngredients={clearIngredients}
+                findRecipes={findRecipes}
+                />
+            </div>
+            <div className="home-randomizer">
+                <Randomizer getRandomRecipes={getRandomRecipes} />
+            </div>  
+        </div>
         <RecipeList 
         recipeData={recipeData}
         setRecipeData={setRecipeData}
         />
-        <footer>
+        <footer className="footer">
             <small>©2023 Foodies C18 development. All rights reserved.</small>
         </footer>
     </main>

@@ -61,7 +61,7 @@ a:hover {
 }
 
 /* --------------Ingredient Component (after user types them in)----------- */
-.ingredients--listed_header {
+.ingredients--component {
     /* border-color: red;
     border-style: dashed; */
     background-color:#F1F1F1 ;
@@ -143,6 +143,14 @@ a:hover {
 
 .button-clear-ingredients {
     background-color: #00B4BF;
+}
+
+.footer {
+    text-align: center;
+}
+.home-test {
+    border: #00B4BF;
+    border-style: solid;
 }
 /* ----------------------------------------------------- UserForm Stylng ------------------------------------------------------ */
 

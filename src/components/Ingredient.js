@@ -4,7 +4,7 @@ function Ingredient(props) {
   return (
 
   <main className='test'>
-    <div className='ingredients--listed_header'>
+    <div className='ingredients--component'>
       <span
         onClick={() => props.deleteIngredient(props.id)}
         className= "ingredient--remove"
