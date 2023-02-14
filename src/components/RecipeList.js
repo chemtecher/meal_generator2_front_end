@@ -22,7 +22,6 @@ function RecipeList(props) {
 
   return (
     <div className="recipelist-container">
-      <h3>We found {recipeList.length} Recipes for You:</h3>
       <div className="recipelist-recipelist">
         {recipeList}
       </div>
