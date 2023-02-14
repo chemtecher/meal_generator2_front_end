@@ -45,25 +45,25 @@ function SignInForm() {
     <div className="form-container popup-box">
         <div className="box">
             <form className="form user-info" >
-                <p>Log In</p>
+                <p className="form--title">Log In</p>
                 <label>
-                    Email: 
                     <input
                     value={formData.email}
                     type='text'
                     placeholder='Email address'
                     name='email'
+                    className="form-input email"
                     onChange={e => setFormData({...formData, email: e.target.value })}
                     />
                 </label>
                 <br />
                 <label>
-                    Password:
                     <input
                     value={formData.password}
                     type='password'
                     placeholder='Password'
                     name='Password'
+                    className="form-input password"
                     onChange={e => setFormData({ ...formData, password: e.target.value })}
                         />
                 </label>

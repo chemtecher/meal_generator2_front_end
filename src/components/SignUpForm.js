@@ -55,7 +55,7 @@ function SignUpForm() {
     <div className="form-container popup-box" >
       <div className="box">
         <form className="form user-info">
-          <p>Sign Up</p>
+          <p className="form--title">Sign Up</p>
           <input
             type="email"
             placeholder="Email address"

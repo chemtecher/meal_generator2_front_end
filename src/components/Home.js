@@ -59,10 +59,12 @@ return (
                 <Randomizer getRandomRecipes={getRandomRecipes} />
             </div>  
         </div>
-        <RecipeList 
-        recipeData={recipeData}
-        setRecipeData={setRecipeData}
-        />
+        <div className="home-recipe-list">
+            <RecipeList 
+            recipeData={recipeData}
+            setRecipeData={setRecipeData}
+            />
+        </div>
         <footer className="footer">
             <small>©2023 Foodies C18 development. All rights reserved.</small>
         </footer>

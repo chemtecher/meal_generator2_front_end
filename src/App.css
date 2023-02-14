@@ -88,9 +88,10 @@ a:hover {
 .homepage-top {
     display: flex;
     /* justify-content: space-evenly; */
-
 }
-
+.home-recipe-list{
+    margin-left: 230px;
+}
 /* --------------Ingredient Component (after user types them in)----------- */
 .ingredients-elements {
     border-color: #00B4BF;
@@ -180,17 +181,33 @@ a:hover {
 .footer {
     text-align: center;
 }
-.homepage-top, .home-randomizer {
-    border: #bf2900;
-    border-style: solid;
+.home-randomizer {
+    /* border: #bf2900; */
+    /* border-style: solid; */
+    margin-right: 45px;
 }
 
-.recipe-card{
+.homepage-top{
+    /* border: #00bfaf;
+    border-style: dashed; */
+    justify-content: space-evenly;
+    margin-top: 30px;
+}
+
+.recipe-card, .favorites-button{
     /* border-style: dashed; */
     margin-bottom: 100px;
     background-color:#ededed;
     padding: 15px;
     border-radius: 30px;
+    max-width: 100px;
+    margin: 5px;
+}
+
+.favorites-button{
+    border: none;
+    cursor: pointer;
+    text-shadow: 2px 2px 3px #000000;
 
 }
 /*-------------------------------------------------------Randomizer--------------------------------- */
@@ -211,14 +228,16 @@ a:hover {
     border-radius: 30px;
 }
 .recipelist-recipelist {
+    margin-top: 20px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     border-color: #00B4BF;
     border-style: solid;
-    background-color:#F1F1F1 ;
+    background-color:#ffffff ;
     border-radius: 10px;
-    max-width: 250px;
+    max-width: 700px;
+    justify-content: space-between;
 }
 
 .recipe-servings-img, .recipe-time-img{
@@ -228,10 +247,10 @@ a:hover {
 }
 
 .recipe-time-img{
-    border-style: dashed;
+    /* border-style: dashed; */
 }
 
-.favorites-button {
+/* .favorites-button {
     background:none;
 	color: inherit;
 	border: none;
@@ -243,10 +262,10 @@ a:hover {
     font-size: larger;
     color: white;
     text-shadow: 2px 2px 3px #000000;
-    position: absolute;
+    /* position: absolute;
     top: 100px;
-    right: 42px;
-}
+    right: 42px; */
+/* }  */
 /* ----------------------------------------------------- UserForm Stylng ------------------------------------------------------ */
 
 /* div that contains the form */
@@ -280,6 +299,23 @@ a:hover {
     border-radius: 5px;
     border: 1px solid gray;
     padding: 5px;
+
+}
+
+.SignInForm--failure {
+    color: red;
+    font-weight: bold;
+}
+
+.form--title {
+    font-weight: 700;
+}
+
+.user-form-submit{
+    padding: 15px 25px;
+    padding-bottom: 30px;
+    font-weight: 600;
+
 }
 
 /* ----------------------------------------------------- PopUp Stylng ------------------------------------------------------ */
@@ -310,6 +346,7 @@ a:hover {
     text-align: center;
     border: 1px solid #999;
     font-size: 20px;
+    font-size: 22px;
 }
 
 .popup {
@@ -364,8 +401,3 @@ a:hover {
     padding-right: 20px;
 }
 
-/* ----------------------LogIn/SignUp Form -----------------------------*/
-.SignInForm--failure {
-    color: red;
-    font-weight: bold;
-}
