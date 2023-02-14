@@ -62,7 +62,7 @@ function SignInForm() {
                     <input
                     value={formData.password}
                     type='password'
-                    placeholder='password'
+                    placeholder='Password'
                     name='Password'
                     onChange={e => setFormData({ ...formData, password: e.target.value })}
                         />

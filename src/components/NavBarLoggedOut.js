@@ -20,7 +20,7 @@ function NavBarLoggedOut(props) {
             <ul className='nav--options'>
                 <li><a href="/about" className='nav--about_link'>About Us</a></li>
                 <li onClick={()=> setSignInPopup(true)}>Log In</li>
-                <PopUp trigger={signInPopup} setTrigger={setSignInPopup}>
+                <PopUp trigger={signInPopup} setTrigger={setSignInPopup} >
                     <SignInForm />
                 </PopUp >
                 <li onClick={()=> setSignUpPopup(true)}>Sign Up</li>
