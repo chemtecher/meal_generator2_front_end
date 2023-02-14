@@ -7,13 +7,12 @@ function RecipeCard(props) {
   // const [recipe, setRecipe] = useState(props.recipe);
   
   return (
-    <div>RecipeCard
+    <div>
       <br/>
       <img className="recipe-img" src={image} alt="food dish"/>
       <h2>{title}</h2>
       <p>plate or fork image {servings} servings</p>
       <p>clock image {time} minutes</p>
-
     </div>
   )
 }

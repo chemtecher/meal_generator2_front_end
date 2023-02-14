@@ -7,23 +7,25 @@ function RecipeList(props) {
   const recipeList = recipeData.map(recipe => {
     console.log(recipe)
     return(
-      <div>
-      <FavoritesBtn recipe={recipe}/>
+      <div className="recipe-card">
       <RecipeCard
             key={recipe.recipe_id}
             // passing the entire prop object (recipe from .map()) 
             // to an instance of the Recipe component
             recipe={recipe}
         />
+      <FavoritesBtn recipe={recipe}/>
       </div>
     )
   })
 
 
   return (
-    <div>
+    <div className="recipelist-container">
       <h3>We found {recipeList.length} Recipes for You:</h3>
-      {recipeList}
+      <div className="recipelist-recipelist">
+        {recipeList}
+      </div>
       
     </div>
   )

@@ -67,7 +67,7 @@ a:hover {
 }
 
 /* --------------Ingredient Component (after user types them in)----------- */
-.ingredients-elements {
+.ingredients-elements, .recipelist-recipelist {
     border-color: #00B4BF;
     border-style: solid;
     background-color:#F1F1F1 ;
@@ -155,7 +155,7 @@ a:hover {
 .footer {
     text-align: center;
 }
-.homepage-top, .home-randomizer {
+.homepage-top, .home-randomizer, .recipe-card {
     border: #bf2900;
     border-style: solid;
 }
@@ -170,7 +170,15 @@ a:hover {
     border-style: solid;
     height: 40vh; 
 }
-
+/* --------------------------------------------------------Recipe List---------------------------- */
+.recipe-img {
+    width: 100%;
+    padding-top: none;
+}
+.recipelist-recipelist {
+    display: flex;
+    flex-wrap: wrap;
+}
 /* ----------------------------------------------------- UserForm Stylng ------------------------------------------------------ */
 
 /* div that contains the form */
