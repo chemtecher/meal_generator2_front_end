@@ -45,7 +45,7 @@ const getRandomRecipes = () => {
 return (
     <main className="App">
       {/* {component} */}
-        <div>
+        <div className='homepage-top'>
             <div className="home-test">
                 <IngredientList 
                 ingredList={ingredList} 

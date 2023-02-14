@@ -59,12 +59,19 @@ a:hover {
     /* do we want a white background of the hat or not? */
     mix-blend-mode: multiply;
 }
+/* -----------------Home Page---------------------------------------------- */
+.homepage-top {
+    display: flex;
+    /* justify-content: space-evenly; */
+
+}
 
 /* --------------Ingredient Component (after user types them in)----------- */
-.ingredients--component {
-    /* border-color: red;
-    border-style: dashed; */
+.ingredients-elements {
+    border-color: #00B4BF;
+    border-style: solid;
     background-color:#F1F1F1 ;
+    border-radius: 10px;
     max-width: 250px;
     /* border-style: outset ; */
 }
@@ -108,12 +115,12 @@ a:hover {
     width: 212px;
 }
 
-.button-submit-ingredients {
+.button-submit-ingredients, .button {
     height: 30px;
     border-radius: 10px;
     border: none;
     background-color: #00B4BF;
-    position: relative;
+    /* position: relative; */
     left: -70px;
     /* border-color: #00B4BF;
     border-style: solid; */
@@ -136,22 +143,34 @@ a:hover {
     margin-top: 10px;
 }
 
-.button-find-recipes {
+.button-clear-ingredients {
     background-color: #8DB580;
     margin-right: 10px;
 }
 
-.button-clear-ingredients {
+.button-find-recipes {
     background-color: #00B4BF;
 }
 
 .footer {
     text-align: center;
 }
-.home-test {
-    border: #00B4BF;
+.homepage-top, .home-randomizer {
+    border: #bf2900;
     border-style: solid;
 }
+/*-------------------------------------------------------Randomizer--------------------------------- */
+.randomizer-container {
+    display: flex;
+    flex-direction: column;
+    background-color: #F1F1F1;
+    padding: 18px;
+    border-radius: 10px;
+    border-color: #00B4BF;
+    border-style: solid;
+    height: 40vh; 
+}
+
 /* ----------------------------------------------------- UserForm Stylng ------------------------------------------------------ */
 
 /* div that contains the form */

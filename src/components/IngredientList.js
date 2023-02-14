@@ -57,16 +57,18 @@ function IngredientList(props) {
     <div className='ingredients_list'>
       <h3 className='ingredients_list--title'>Ingredient(s) List:</h3>
     </div>
-      {ingredElements}
-      <button 
-        className="button-find-recipes"
-        onClick={findRecipes}
-        >Find Me Recipes 
-      </button>
+        <div className='ingredients-elements'>
+          {ingredElements}
+        </div> 
       <button 
         className="button-clear-ingredients"
         onClick={clearIngredients}
         >Clear Ingredients  
+      </button>
+      <button 
+        className="button-find-recipes"
+        onClick={findRecipes}
+        >Find Me Recipes 
       </button>
     </div>
   )
