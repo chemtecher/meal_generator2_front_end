@@ -5,7 +5,7 @@ function IngredientList(props) {
   // destructuring props to use variable names vs props.variable
   const{ingredList, setIngredList, deleteIngredient, clearIngredients, findRecipes} = props;
   const [ingredInput, setIngredInput] = useState("");
- 
+  
   const handleChange =async( event) => {
     setIngredInput(event.target.value);
   }
