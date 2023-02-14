@@ -34,7 +34,7 @@ nav {
 }
 
 .nav--options li:hover,
-a:hover {
+.nav--about_link:hover {
     display: inline;
     padding: 10px;
     text-decoration: underline;
@@ -121,7 +121,7 @@ a:hover {
 } */
 
 .ingredients--title {
-    font-size: 24px;
+    font-size: 20px;
     margin-bottom: 0px;
 }
 
@@ -200,8 +200,9 @@ a:hover {
     background-color:#ededed;
     padding: 15px;
     border-radius: 30px;
-    max-width: 100px;
+    max-width: 180px;
     margin: 5px;
+    border: #00B4BF;
 }
 
 .favorites-button{
@@ -227,6 +228,15 @@ a:hover {
     padding-top: none;
     border-radius: 30px;
 }
+
+.recipe-url{
+    color:black;
+    cursor: pointer;
+}
+
+.recipe-url:hover{
+    color: #426b36;
+}
 .recipelist-recipelist {
     margin-top: 20px;
     display: flex;
@@ -245,27 +255,6 @@ a:hover {
     height: 15px;
     mix-blend-mode: multiply;
 }
-
-.recipe-time-img{
-    /* border-style: dashed; */
-}
-
-/* .favorites-button {
-    background:none;
-	color: inherit;
-	border: none;
-	padding: 10px;
-	font: inherit;
-	cursor: pointer;
-	outline: inherit;
-    padding-left: 500px;
-    font-size: larger;
-    color: white;
-    text-shadow: 2px 2px 3px #000000;
-    /* position: absolute;
-    top: 100px;
-    right: 42px; */
-/* }  */
 /* ----------------------------------------------------- UserForm Stylng ------------------------------------------------------ */
 
 /* div that contains the form */
@@ -315,7 +304,6 @@ a:hover {
     padding: 15px 25px;
     padding-bottom: 30px;
     font-weight: 600;
-
 }
 
 /* ----------------------------------------------------- PopUp Stylng ------------------------------------------------------ */
@@ -331,6 +319,7 @@ a:hover {
     padding: 20px;
     border: 1px solid #999;
     overflow: auto;
+    
 }
 .close-icon {
     content: 'x';
@@ -357,6 +346,7 @@ a:hover {
     height: 100vh;
     top: 0;
     left: 0;
+    z-index: 1000;
 }
 
 .popup--inner {
