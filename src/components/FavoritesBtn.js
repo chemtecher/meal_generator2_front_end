@@ -48,7 +48,8 @@ export default function FavoritesBtn({ recipe }) {
 
 
   return (
-      <button
+      <button 
+        className="favorites-button"
         onClick={() => {
           addToFav();
           setLiked(!liked);

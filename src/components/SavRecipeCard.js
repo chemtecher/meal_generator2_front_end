@@ -3,7 +3,7 @@ import {useState} from 'react'
 
 
 function SavRecipeCard(props) {
-  const {image, title, time, recipe_url, servings, recipe_id} = props.favRecipe;
+  const {image, title, time, recipe_url, recipe_id} = props.favRecipe;
   const [liked, setLiked] = useState(true);
   
   const heartFill = liked ? '❤️' : '🤍';
@@ -14,7 +14,6 @@ function SavRecipeCard(props) {
       <br />
       <img className="recipe-img" src={image} alt="food dish" />
       <h2>{title}</h2>
-      {/* <p>plate or fork image {servings} servings</p> */}
       <p>clock image {time} mins</p>
       <button
           onClick={() => {
