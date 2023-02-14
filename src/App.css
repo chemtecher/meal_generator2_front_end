@@ -5,6 +5,7 @@
 
 .App {
     padding-left: 45px;
+    height: 100vh
 }
 
 nav {
@@ -242,6 +243,9 @@ a:hover {
     font-size: larger;
     color: white;
     text-shadow: 2px 2px 3px #000000;
+    position: absolute;
+    top: 100px;
+    right: 42px;
 }
 /* ----------------------------------------------------- UserForm Stylng ------------------------------------------------------ */
 
