@@ -67,7 +67,7 @@ a:hover {
 }
 
 /* --------------Ingredient Component (after user types them in)----------- */
-.ingredients-elements, .recipelist-recipelist {
+.ingredients-elements {
     border-color: #00B4BF;
     border-style: solid;
     background-color:#F1F1F1 ;
@@ -177,7 +177,19 @@ a:hover {
 }
 .recipelist-recipelist {
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
+    border-color: #00B4BF;
+    border-style: solid;
+    background-color:#F1F1F1 ;
+    border-radius: 10px;
+    max-width: 250px;
+}
+
+.recipe-servings-img, .recipe-time-img{
+    width: 15px;
+    height: 15px;
+    mix-blend-mode: multiply;
 }
 /* ----------------------------------------------------- UserForm Stylng ------------------------------------------------------ */
 

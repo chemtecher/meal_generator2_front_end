@@ -9,12 +9,12 @@ function SavRecipeCard(props) {
   const heartFill = liked ? '❤️' : '🤍';
   
   return (
-    <div>
+    <div className="recipe-card saved-recipe-card">
       SavRecipeCard
       <br />
       <img className="recipe-img" src={image} alt="food dish" />
       <h2>{title}</h2>
-      <p>plate or fork image {servings} servings</p>
+      {/* <p>plate or fork image {servings} servings</p> */}
       <p>clock image {time} mins</p>
       <button
           onClick={() => {

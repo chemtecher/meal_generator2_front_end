@@ -8,11 +8,19 @@ function RecipeCard(props) {
   
   return (
     <div>
-      <br/>
+    
       <img className="recipe-img" src={image} alt="food dish"/>
       <h2>{title}</h2>
-      <p>plate or fork image {servings} servings</p>
-      <p>clock image {time} minutes</p>
+      <img 
+        className="recipe-servings-img" 
+        src={require('../images/servings_icon.png')} 
+        alt="plate and fork"
+        /> {servings} servings
+      <img
+        className="recipe-time-img"
+        src={require("../images/time_icon.png")}
+        alt="clock"
+      /> {time} mins
     </div>
   )
 }
