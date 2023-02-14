@@ -81,13 +81,11 @@ a:hover {
 .nav--img {
     width: 45px;
     height: 35px;
-    /* do we want a white background of the hat or not? */
     mix-blend-mode: multiply;
 }
 /* -----------------Home Page---------------------------------------------- */
 .homepage-top {
     display: flex;
-    /* justify-content: space-evenly; */
 }
 .home-recipe-list{
     margin-left: 230px;
@@ -99,26 +97,17 @@ a:hover {
     background-color:#F1F1F1 ;
     border-radius: 10px;
     max-width: 250px;
-    /* border-style: outset ; */
 }
 
 .ingredient--remove {
-    /* border-color: rgb(0, 255, 128); */
-    /* border-style: dashed; */
     padding-right: 10px;
 
 }
 .ingredient--name {
-    /* border-color: rgb(100, 26, 143);
-    border-style: dashed; */
     font-weight: 400;
 }
 
 /* -----Ingredients List Components------ */
-/* .ingredients--header{
-    border-color: rgb(100, 26, 143);
-    border-style: dashed;
-} */
 
 .ingredients--title {
     font-size: 24px;
@@ -131,8 +120,6 @@ a:hover {
 }
 
 .form-ingredient-input {
-    /* border-color: rgb(143, 26, 47);
-    border-style: dashed; */
     background-color: #F1F1F1;
     padding: 18px;
     border-radius: 10px;
@@ -146,10 +133,7 @@ a:hover {
     border-radius: 10px;
     border: none;
     background-color: #00B4BF;
-    /* position: relative; */
     left: -70px;
-    /* border-color: #00B4BF;
-    border-style: solid; */
 }
 
 .button-submit-ingredients:active {
@@ -182,14 +166,10 @@ a:hover {
     text-align: center;
 }
 .home-randomizer {
-    /* border: #bf2900; */
-    /* border-style: solid; */
     margin-right: 45px;
 }
 
 .homepage-top{
-    /* border: #00bfaf;
-    border-style: dashed; */
     justify-content: space-evenly;
     margin-top: 30px;
 }
@@ -200,7 +180,7 @@ a:hover {
     background-color:#ededed;
     padding: 15px;
     border-radius: 30px;
-    max-width: 100px;
+    max-width: 130px;
     margin: 5px;
 }
 
@@ -246,32 +226,16 @@ a:hover {
     mix-blend-mode: multiply;
 }
 
-.recipe-time-img{
-    /* border-style: dashed; */
+.saved-recipes-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
-
-/* .favorites-button {
-    background:none;
-	color: inherit;
-	border: none;
-	padding: 10px;
-	font: inherit;
-	cursor: pointer;
-	outline: inherit;
-    padding-left: 500px;
-    font-size: larger;
-    color: white;
-    text-shadow: 2px 2px 3px #000000;
-    /* position: absolute;
-    top: 100px;
-    right: 42px; */
-/* }  */
 /* ----------------------------------------------------- UserForm Stylng ------------------------------------------------------ */
 
 /* div that contains the form */
 .form-container {
     height:95vh;
-    /* padding: 20px; */
     padding-left: 50%;
     display: flex;
     flex-direction: column;

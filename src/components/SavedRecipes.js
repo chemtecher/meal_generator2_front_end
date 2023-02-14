@@ -22,7 +22,7 @@ return (
             <span className="close-icon" onClick={props.handleClose}>x</span>
             <div>
                 <h3>You have {favList.length} Saved Recipes</h3>
-                {favList}
+                <div className="saved-recipes-list">{favList}</div>
             </div>
         </div>
     </div>
