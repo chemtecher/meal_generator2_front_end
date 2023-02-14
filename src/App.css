@@ -34,7 +34,7 @@ nav {
 }
 
 .nav--options li:hover,
-a:hover {
+.nav--about_link:hover {
     display: inline;
     padding: 10px;
     text-decoration: underline;
@@ -110,7 +110,7 @@ a:hover {
 /* -----Ingredients List Components------ */
 
 .ingredients--title {
-    font-size: 24px;
+    font-size: 20px;
     margin-bottom: 0px;
 }
 
@@ -182,6 +182,7 @@ a:hover {
     border-radius: 30px;
     max-width: 130px;
     margin: 5px;
+    border: #00B4BF;
 }
 
 .favorites-button{
@@ -206,6 +207,15 @@ a:hover {
     width: 100%;
     padding-top: none;
     border-radius: 30px;
+}
+
+.recipe-url{
+    color:black;
+    cursor: pointer;
+}
+
+.recipe-url:hover{
+    color: #426b36;
 }
 .recipelist-recipelist {
     margin-top: 20px;
@@ -279,7 +289,6 @@ a:hover {
     padding: 15px 25px;
     padding-bottom: 30px;
     font-weight: 600;
-
 }
 
 /* ----------------------------------------------------- PopUp Stylng ------------------------------------------------------ */
@@ -295,6 +304,7 @@ a:hover {
     padding: 20px;
     border: 1px solid #999;
     overflow: auto;
+    
 }
 .close-icon {
     content: 'x';
@@ -321,6 +331,7 @@ a:hover {
     height: 100vh;
     top: 0;
     left: 0;
+    z-index: 1000;
 }
 
 .popup--inner {
